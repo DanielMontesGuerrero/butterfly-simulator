@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://t5yx4sgs1brp"]
+[gd_scene load_steps=6 format=3 uid="uid://t5yx4sgs1brp"]
 
 [ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="1_etpx5"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
-[ext_resource type="Script" path="res://scripts/ScoreManager.gd" id="4_24x5q"]
 [ext_resource type="PackedScene" uid="uid://dnalhexu4bm3s" path="res://scenes/spike.tscn" id="4_55rhy"]
+[ext_resource type="Script" path="res://scripts/managers/ScoreManager.gd" id="4_fnkw6"]
+[ext_resource type="Script" path="res://scripts/managers/DebugManager.gd" id="5_l6fbu"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,17 +13,17 @@ position = Vector2(269, 181)
 texture = ExtResource("1_etpx5")
 
 [node name="Player" parent="." instance=ExtResource("2_b3hvr")]
-position = Vector2(32, 56)
+position = Vector2(270, 204)
 
 [node name="Spike" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(109, 330)
+position = Vector2(224, 34)
 
 [node name="Spike2" parent="." instance=ExtResource("4_55rhy")]
 position = Vector2(157, 33)
 rotation = 3.14159
 
 [node name="Spike3" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(371, 329)
+position = Vector2(324, 33)
 
 [node name="Spike4" parent="." instance=ExtResource("4_55rhy")]
 position = Vector2(447, 33)
@@ -33,4 +34,7 @@ offset_left = 495.0
 offset_top = 3.0
 offset_right = 535.0
 offset_bottom = 26.0
-script = ExtResource("4_24x5q")
+script = ExtResource("4_fnkw6")
+
+[node name="Debug" type="Node2D" parent="."]
+script = ExtResource("5_l6fbu")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnalhexu4bm3s"]
 
-[ext_resource type="Script" path="res://scripts/SpikeManager.gd" id="1_k2qqn"]
 [ext_resource type="Texture2D" uid="uid://eqc4dgdl3x80" path="res://assets/sprites/spike.png" id="1_xdawj"]
+[ext_resource type="Script" path="res://scripts/managers/SpikeManager.gd" id="1_yg14h"]
 
 [node name="Spike" type="Node2D"]
-script = ExtResource("1_k2qqn")
+script = ExtResource("1_yg14h")
 
 [node name="SpikeSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
