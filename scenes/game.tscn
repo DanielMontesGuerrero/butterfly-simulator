@@ -1,22 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://t5yx4sgs1brp"]
+[gd_scene load_steps=7 format=3 uid="uid://t5yx4sgs1brp"]
 
 [ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="1_etpx5"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
 [ext_resource type="PackedScene" uid="uid://dnalhexu4bm3s" path="res://scenes/spike.tscn" id="4_55rhy"]
 [ext_resource type="Script" path="res://scripts/managers/ScoreManager.gd" id="4_fnkw6"]
 [ext_resource type="Script" path="res://scripts/managers/DebugManager.gd" id="5_l6fbu"]
+[ext_resource type="Script" path="res://scripts/managers/CameraManager.gd" id="6_hskwl"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(269, 181)
+position = Vector2(-2, -1)
 texture = ExtResource("1_etpx5")
 
 [node name="Player" parent="." instance=ExtResource("2_b3hvr")]
-position = Vector2(270, 204)
 
 [node name="Spike" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(224, 34)
+position = Vector2(94, 108)
 
 [node name="Spike2" parent="." instance=ExtResource("4_55rhy")]
 position = Vector2(157, 33)
@@ -38,3 +38,8 @@ script = ExtResource("4_fnkw6")
 
 [node name="Debug" type="Node2D" parent="."]
 script = ExtResource("5_l6fbu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+script = ExtResource("6_hskwl")

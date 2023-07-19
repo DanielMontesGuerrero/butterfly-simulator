@@ -11,7 +11,11 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("controlls_touch"):
 		butterfly.position = self.position
-		butterfly.directed_jump(event.position)
+		var touch_position = (GameManager.cameraMngr.to_global(event.position - get_viewport_rect().size / 2) 
+			- GameManager.cameraMngr.get_target_position()
+			+ GameManager.cameraMngr.get_screen_center_position())
+		GameManager.debugMngr.set_touch_position(touch_position)
+		butterfly.directed_jump(touch_position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
