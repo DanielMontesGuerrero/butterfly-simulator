@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jtl1p2hu1au"]
+
+[ext_resource type="Texture2D" uid="uid://c3q0kgrowkrqt" path="res://assets/sprites/obstacle_1.png" id="1_4xui6"]
+[ext_resource type="Script" path="res://scripts/managers/ObstacleManager.gd" id="1_foaie"]
+
+[node name="Obstacle1" type="Node2D"]
+script = ExtResource("1_foaie")
+
+[node name="Obstacle1" type="Sprite2D" parent="."]
+position = Vector2(-65, -383)
+texture = ExtResource("1_4xui6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-62, -385)
+scale = Vector2(40.6535, -38.555)
+polygon = PackedVector2Array(1.96785, -9.9598, 2.23843, -5.44677, 6.86287, -4.51303, 9.69166, -1.63403, 9.83924, -0.881857, 8.60934, -0.337181, 7.10885, -3.0865, 3.61592, -3.55337, 5.48538, 1.32279, 4.13248, 4.56491, 3.46833, 1.84153, 3.00097, -3.9943, 2.01705, -4.69459, 0.983924, -1.94527, 1.37749, 0.233433, 0.565757, 0.544677, 0, -1.65997, -1.84486, -0.700298, -2.28762, 3.19025, -2.92718, 4.95396, -2.16463, 6.48425, -2.73039, 9.88199, -4.52605, 6.06925, -2.82878, 2.33433, -2.95177, 0, -5.1902, -0.0518742, -6.78908, 0.907795, -8.38796, 4.40929, -9.91304, 3.65711, -9.71626, 2.61964, -6.5677, -0.933731, -1.89405, -1.84153, 0.688747, -3.55337, 0.270579, -5.03177, -2.33682, -3.60524, -4.89502, -2.48995, -7.45323, -1.63403, -7.47783, -2.15277, -6.69069, -2.85307, -3.17316, -4.61678, -7.25644, -4.61678, -7.40403, -4.85022, -5.85435, -5.75801, -8.97831, -6.92517, -8.75693, -7.65141, -4.96882, -7.05486, -4.64904, -8.29983, -2.95177, -7.21048, -1.03312, -6.12113, 1.00852, -6.97705, 1.10691, -9.9598)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

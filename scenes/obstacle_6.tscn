@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dex3l1cq48tf1"]
+
+[ext_resource type="Script" path="res://scripts/managers/ObstacleManager.gd" id="1_eyknm"]
+[ext_resource type="Texture2D" uid="uid://b2t48ryxcxm0" path="res://assets/sprites/obstacle_6.png" id="2_r4ey1"]
+
+[node name="Obstacle6" type="Node2D"]
+script = ExtResource("1_eyknm")
+
+[node name="Obstacle6" type="Sprite2D" parent="."]
+position = Vector2(421, -289)
+rotation = 2.46091
+texture = ExtResource("2_r4ey1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(336, -384)
+scale = Vector2(49.1427, 42.5611)
+polygon = PackedVector2Array(-5.657, 8.99883, -4.98549, 8.0825, -3.54071, 7.37763, 2.54362, 3.05443, 6.34886, 3.52435, 8.01748, 5.52147, 9.21806, 6.08537, 7.6105, 4.22921, 5.27037, 1.85616, 8.62794, -0.986814, 7.22387, -2.79598, 2.84885, 1.1043, 4.31397, -2.42005, 8.36341, -6.39081, 6.97968, -6.67275, 8.54655, -9.39825, 7.00003, -7.54209, 2.84885, -1.69168, 2.58431, -3.31288, 2.17733, -6.71975, 1.62791, -4.39368, 0.122094, 1.01031, -2.15699, 0.0469933, -0.569769, -3.26589, -2.9099, -4.34669, -4.782, 1.33925, -3.7442, 4.34669, -3.68315, 6.39081, -8.58724, 9.02232)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

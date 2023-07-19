@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhdmijtkopgav"]
+
+[ext_resource type="Script" path="res://scripts/managers/ObstacleManager.gd" id="1_iq2l6"]
+[ext_resource type="Texture2D" uid="uid://cydns2cl4obm5" path="res://assets/sprites/obstacle_5.png" id="2_tlqkj"]
+
+[node name="Obstacle5" type="Node2D"]
+script = ExtResource("1_iq2l6")
+
+[node name="Obstacle5" type="Sprite2D" parent="."]
+position = Vector2(-199, -1249)
+rotation = 4.71239
+texture = ExtResource("2_tlqkj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-190, -1226)
+scale = Vector2(80.8906, 127.578)
+polygon = PackedVector2Array(5.52598, 9.61763, 5.40236, 9.25706, 7.13309, 7.73643, 9.60557, 8.21457, 7.51633, 7.02314, 9.04926, 4.08377, 8.49296, 2.42988, 5.93394, 2.30447, 4.48754, 1.55983, 5.10566, -0.148928, 8.06027, -0.799509, 4.6977, -1.12088, 3.72108, -4.68732, 1.71837, -7.04666, 3.07823, -3.37048, 1.68128, -0.619227, -1.85436, -1.68524, -1.01372, -4.703, -7.38034, -8.72406, -9.5314, -9.85278, -9.75392, -9.65682, -5.51362, -4.50704, -2.84335, -2.25744, -4.87078, 0.587875, -1.81727, 0.877893, -0.0123625, 2.8845, -0.148349, 6.03551, 0.964266, 7.27397, 2.12633, 9.5706)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
