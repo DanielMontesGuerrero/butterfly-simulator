@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="1_etpx5"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
-[ext_resource type="PackedScene" uid="uid://dnalhexu4bm3s" path="res://scenes/spike.tscn" id="4_55rhy"]
 [ext_resource type="Script" path="res://scripts/managers/ScoreManager.gd" id="4_fnkw6"]
 [ext_resource type="Script" path="res://scripts/managers/DebugManager.gd" id="5_l6fbu"]
 [ext_resource type="Script" path="res://scripts/managers/CameraManager.gd" id="6_hskwl"]
@@ -13,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bhdmijtkopgav" path="res://scenes/obstacle_5.tscn" id="11_vop7b"]
 [ext_resource type="PackedScene" uid="uid://dex3l1cq48tf1" path="res://scenes/obstacle_6.tscn" id="12_jgw4h"]
 [ext_resource type="PackedScene" uid="uid://bmjvolvo6ilwv" path="res://scenes/obstacle_7.tscn" id="13_6g6ie"]
+[ext_resource type="PackedScene" uid="uid://d3v2bryuqkha7" path="res://scenes/random_path_follower.tscn" id="13_n3tqc"]
 
 [node name="Game" type="Node2D"]
 
@@ -21,20 +21,6 @@ position = Vector2(-2, -1)
 texture = ExtResource("1_etpx5")
 
 [node name="Player" parent="." instance=ExtResource("2_b3hvr")]
-
-[node name="Spike" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(94, 108)
-
-[node name="Spike2" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(157, 33)
-rotation = 3.14159
-
-[node name="Spike3" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(324, 33)
-
-[node name="Spike4" parent="." instance=ExtResource("4_55rhy")]
-position = Vector2(447, 33)
-rotation = 3.14159
 
 [node name="Label" type="Label" parent="."]
 offset_left = 495.0
@@ -52,7 +38,7 @@ position_smoothing_speed = 1.0
 script = ExtResource("6_hskwl")
 
 [node name="Obstacle1" parent="." instance=ExtResource("7_xw3rp")]
-position = Vector2(2061, 1881)
+position = Vector2(2740, -829)
 
 [node name="Obstacle2" parent="." instance=ExtResource("8_alkn7")]
 position = Vector2(-1109, 1169)
@@ -71,3 +57,6 @@ position = Vector2(1050, -1719)
 
 [node name="Obstacle7" parent="." instance=ExtResource("13_6g6ie")]
 position = Vector2(4008, -19)
+
+[node name="Node2D" parent="." instance=ExtResource("13_n3tqc")]
+position = Vector2(-285, -168)
