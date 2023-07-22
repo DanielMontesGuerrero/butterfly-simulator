@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cto50ppl3rysv"]
+[gd_scene load_steps=3 format=3 uid="uid://cto50ppl3rysv"]
 
+[ext_resource type="Script" path="res://scripts/managers/LeafManager.gd" id="1_cyitf"]
 [ext_resource type="Texture2D" uid="uid://c00sdefvtwbfp" path="res://assets/sprites/leaf_4.png" id="1_ecs34"]
 
 [node name="Leaf4" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Leaf"]]
+script = ExtResource("1_cyitf")
 
 [node name="Leaf4" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_ecs34")

@@ -1,5 +1,6 @@
 class_name Butterfly
 
+
 var velocity: Vector2
 var position: Vector2
 var is_jumping: bool
@@ -10,6 +11,7 @@ const gravity_factor := 10
 const stop_factor := 0.01
 const EPS := 1e-9
 
+
 func sgn(x: float):
 	if(x > 0):
 		return 1
@@ -17,12 +19,14 @@ func sgn(x: float):
 		return -1
 	return 0
 
+
 func _init():
 	velocity = Vector2.ZERO
 	position = Vector2.ZERO
 	is_jumping = false
 	jump_velocity = Vector2.ZERO
 	gravity_velocity = gravity_factor * Vector2(0, 1)
+
 
 func process(delta: float):
 	if is_jumping:

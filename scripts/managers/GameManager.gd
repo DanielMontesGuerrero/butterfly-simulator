@@ -1,10 +1,12 @@
 extends Node
 
+
 var playerMngr
 var cameraMngr
 var debugMngr
 var timer
 var rng
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

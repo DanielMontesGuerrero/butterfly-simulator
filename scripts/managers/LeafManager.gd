@@ -1,22 +1,49 @@
 extends CharacterBody2D
 
+
 const Movement := preload("res://scripts/utils/Movement.gd")
 
-var bezier_t := 0.0
-var p0 := Vector2(-500, -250)
-var p1 := Vector2(0, 300)
-var p2 := Vector2(500, -300)
+signal enemy_died(id)
+
+var is_expanding := true
+var is_shrinking := false
+var id: int
+var timer
+const change_size_speed := 0.01
+const life_time = 10.0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	scale = Vector2.ZERO
+	timer = Timer.new()
+	timer.wait_time = life_time
+	timer.autostart = true
+	timer.timeout.connect(_on_timer_timeout)
+	timer.one_shot = true
+	add_child(timer)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	bezier_t += delta
-	if bezier_t <= 1.0:
-		var next_bezier_point = Movement.quadratic_bezier(p0, p1, p2, bezier_t)
-		var velocity = next_bezier_point - position
-		position = next_bezier_point
-		# move_and_collide(velocity)
+func _process(_delta):
+	if is_shrinking:
+		scale.x -= change_size_speed
+		scale.y -= change_size_speed
+		if scale.x <= 0 or scale.y <= 0:
+			enemy_died.emit(id)
+			queue_free()
+	if is_expanding:
+		scale.x += change_size_speed
+		scale.y += change_size_speed
+		if scale.x >= 1 or scale.y >= 1:
+			scale = Vector2(1, 1)
+			is_expanding = false
+
+
+func kill():
+	is_shrinking = true
+	is_expanding = false
+
+
+func _on_timer_timeout():
+	kill()

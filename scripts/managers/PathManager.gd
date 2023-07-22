@@ -1,26 +1,35 @@
 extends Path2D
 
+
 const Movement := preload("res://scripts/utils/Movement.gd")
+
+var id: int
+var timer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
+
 func set_new_path():
-	var new_position = get_child(0).get_child(0).global_position
-	# var new_position = to_global(character_position)
-	position = new_position
-	var curve = Movement.get_random_curve()
-	get_curve().clear_points()
-	for bezier_point in curve:
-		get_curve().add_point(
+	if get_child(0).get_child_count() > 0:
+		var new_position = get_child(0).get_child(0).global_position
+		set_global_position(new_position)
+	var new_curve = Movement.get_random_curve()
+	self.get_curve().clear_points()
+	for bezier_point in new_curve:
+		self.get_curve().add_point(
 			bezier_point[0],
 			bezier_point[1],
 			bezier_point[2],
 		)
 
+
+func set_enemy_node(enemy):
+	get_child(0).add_child(enemy)

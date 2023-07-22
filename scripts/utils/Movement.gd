@@ -1,8 +1,9 @@
 class_name Movement
 
+
 const MIN_DELTA = -1000
 const MAX_DELTA = 1000
-const NUM_POINTS = 7
+const NUM_POINTS = 3
 
 static func quadratic_bezier(p0: Vector2, p1: Vector2, p2: Vector2, t: float):
 	var q0 = p0.lerp(p1, t)

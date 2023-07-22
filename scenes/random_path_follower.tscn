@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3v2bryuqkha7"]
+[gd_scene load_steps=4 format=3 uid="uid://d3v2bryuqkha7"]
 
 [ext_resource type="Script" path="res://scripts/managers/PathFollowManager.gd" id="1_80kwv"]
 [ext_resource type="Script" path="res://scripts/managers/PathManager.gd" id="1_mwi5i"]
-[ext_resource type="PackedScene" uid="uid://w7d5rmj7qo6i" path="res://scenes/leaf_1.tscn" id="2_40yaj"]
 
 [sub_resource type="Curve2D" id="Curve2D_w4pfc"]
 _data = {
@@ -19,6 +18,3 @@ position = Vector2(-1, -1)
 rotation = 1.97617
 loop = false
 script = ExtResource("1_80kwv")
-
-[node name="Leaf1" parent="PathFollow2D" instance=ExtResource("2_40yaj")]
-scale = Vector2(0.05, 0.05)

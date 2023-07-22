@@ -5,7 +5,7 @@
 
 [node name="Leaf3" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Leaf"]]
 script = ExtResource("1_ak7c0")
 
 [node name="Leaf3" type="Sprite2D" parent="CharacterBody2D"]
