@@ -1,19 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://t5yx4sgs1brp"]
+[gd_scene load_steps=10 format=3 uid="uid://t5yx4sgs1brp"]
 
 [ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="1_etpx5"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
 [ext_resource type="Script" path="res://scripts/managers/ScoreManager.gd" id="4_fnkw6"]
 [ext_resource type="Script" path="res://scripts/managers/DebugManager.gd" id="5_l6fbu"]
+[ext_resource type="PackedScene" uid="uid://tqvl68m140t6" path="res://scenes/game_status.tscn" id="6_3jlau"]
 [ext_resource type="Script" path="res://scripts/managers/CameraManager.gd" id="6_hskwl"]
+[ext_resource type="PackedScene" uid="uid://dnalhexu4bm3s" path="res://scenes/spike.tscn" id="7_sy0at"]
+[ext_resource type="PackedScene" uid="uid://c1jtl1p2hu1au" path="res://scenes/obstacle_1.tscn" id="9_d4nu1"]
 [ext_resource type="PackedScene" uid="uid://bucdi5tnplt6q" path="res://scenes/enemy_spawner.tscn" id="14_t11du"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-2, -1)
+scale = Vector2(3.5655, 2.99086)
 texture = ExtResource("1_etpx5")
 
 [node name="Player" parent="." instance=ExtResource("2_b3hvr")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+script = ExtResource("6_hskwl")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 495.0
@@ -25,9 +33,14 @@ script = ExtResource("4_fnkw6")
 [node name="Debug" type="Node2D" parent="."]
 script = ExtResource("5_l6fbu")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-position_smoothing_speed = 1.0
-script = ExtResource("6_hskwl")
-
 [node name="EnemySpawner" parent="." instance=ExtResource("14_t11du")]
+
+[node name="Spike" parent="." instance=ExtResource("7_sy0at")]
+position = Vector2(413, 250)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("6_3jlau")]
+
+[node name="Obstacle1" parent="." instance=ExtResource("9_d4nu1")]
+position = Vector2(-902, 967)

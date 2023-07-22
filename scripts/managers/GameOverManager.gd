@@ -1,7 +1,7 @@
-extends Node2D
+extends Control
 
 
-var game_over_scene: PackedScene = preload("res://scenes/game_finish.tscn")
+@export var start_game_scene: PackedScene
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,5 +14,7 @@ func _process(delta):
 	pass
 
 
-func _on_area_2d_body_entered(body):
-	get_tree().change_scene_to_packed(game_over_scene)
+func _input(event):
+	if (event is InputEventKey) or (event is InputEventMouseButton):
+		if event.pressed:
+			get_tree().change_scene_to_packed(start_game_scene)

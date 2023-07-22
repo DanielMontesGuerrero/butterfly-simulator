@@ -31,7 +31,8 @@ func _process(_delta):
 
 
 func _on_timer_timeout():
-	var path_follower_position = GameManager.playerMngr.global_position + Utils.random_offset_vector()
+	var path_follower_position = (GameManager.player_mngr.global_position
+		+ Utils.random_offset_vector())
 	var path_follower = PathFollower.instantiate()
 	path_follower.set_global_position(path_follower_position)
 	path_follower.curve = Curve2D.new()

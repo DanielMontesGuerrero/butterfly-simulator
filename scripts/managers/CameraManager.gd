@@ -2,7 +2,7 @@ extends Camera2D
 
 
 func _ready():
-	GameManager.cameraMngr = self
+	GameManager.camera_mngr = self
 
 
 func _process(_delta):

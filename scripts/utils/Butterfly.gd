@@ -6,10 +6,12 @@ var position: Vector2
 var is_jumping: bool
 var jump_velocity: Vector2
 var gravity_velocity: Vector2
+var num_lives: int
 const jump_speed_factor := 5
 const gravity_factor := 10
 const stop_factor := 0.01
 const EPS := 1e-9
+const INITIAL_NUM_LIVES := 3
 
 
 func sgn(x: float):
@@ -26,6 +28,7 @@ func _init():
 	is_jumping = false
 	jump_velocity = Vector2.ZERO
 	gravity_velocity = gravity_factor * Vector2(0, 1)
+	num_lives = INITIAL_NUM_LIVES
 
 
 func process(delta: float):
@@ -54,3 +57,7 @@ func directed_jump(direction_point: Vector2):
 
 func set_gravity(dir):
 	gravity_velocity = gravity_factor * dir
+
+
+func receive_damage():
+	num_lives -= 1

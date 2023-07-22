@@ -14,7 +14,7 @@ var clr := Color.RED
 
 
 func _ready():
-	GameManager.debugMngr = self
+	GameManager.debug_mngr = self
 
 
 func _draw():

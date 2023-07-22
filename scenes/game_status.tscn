@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://tqvl68m140t6"]
+
+[ext_resource type="Script" path="res://scripts/managers/GameStatusManager.gd" id="1_60a2f"]
+[ext_resource type="Texture2D" uid="uid://b2g2gmpxmdvwl" path="res://assets/sprites/heart.png" id="1_ync5o"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_60a2f")
+texture = ExtResource("1_ync5o")
+
+[node name="MenuContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="HealthContainer" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MenuContainer/HealthContainer"]
+layout_mode = 2
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuContainer/HealthContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="LiveIconsContainer" type="HBoxContainer" parent="MenuContainer/HealthContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="ScoreContaimer" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="ColorRect" type="ColorRect" parent="MenuContainer/ScoreContaimer"]
+layout_mode = 2
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuContainer/ScoreContaimer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MenuContainer/ScoreContaimer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="MenuContainer/ScoreContaimer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Score:"
+
+[node name="ScoreNumber" type="Label" parent="MenuContainer/ScoreContaimer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
