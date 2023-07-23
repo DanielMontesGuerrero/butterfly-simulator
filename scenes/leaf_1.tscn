@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://w7d5rmj7qo6i"]
+[gd_scene load_steps=4 format=3 uid="uid://w7d5rmj7qo6i"]
 
 [ext_resource type="Script" path="res://scripts/managers/LeafManager.gd" id="1_ogxvy"]
 [ext_resource type="Texture2D" uid="uid://b4kkotum8ltrl" path="res://assets/sprites/leaf_1.png" id="2_dvuiw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nqo6e"]
+radius = 10961.3
 
 [node name="Leaf1" type="Node2D"]
 
@@ -14,3 +17,8 @@ texture = ExtResource("2_dvuiw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
 scale = Vector2(139.194, 98.0359)
 polygon = PackedVector2Array(9.73464, 9.20071, 8.54206, 6.94643, 8.68574, 5.73259, 8.4774, 2.60109, 7.09084, -2.45828, 4.56199, -6.11, 0.646581, -9.21091, -3.29756, -9.78213, -7.33511, -8.72129, -9.8424, -8.9355, -8.7073, -7.40545, -7.16268, -0.918031, -5.41691, 2.60109, -3.03893, 5.69179, -0.23708, 7.85426, 3.16106, 8.9253, 6.02757, 8.77229, 8.59953, 8.02767, 9.40417, 9.44551)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_nqo6e")

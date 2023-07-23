@@ -31,22 +31,40 @@ func _process(_delta):
 
 
 func _on_timer_timeout():
-	var path_follower_position = (GameManager.player_mngr.global_position
-		+ Utils.random_offset_vector())
-	var path_follower = PathFollower.instantiate()
-	path_follower.set_global_position(path_follower_position)
-	path_follower.curve = Curve2D.new()
-	path_follower.set_new_path()
 	var enemy = create_random_enemy()
-	enemy.get_child(0).enemy_died.connect(_handle_enemy_died)
-	enemy.get_child(0).id = id_count
-	path_follower.id = id_count
-	id_count += 1
-	path_follower.set_enemy_node(enemy)
-	add_child(path_follower)
-
+	add_child(enemy)
 
 func create_random_enemy():
+	var option = rng.randi_range(0, 2)
+	var path_follower
+	var enemy = create_random_type_enemy()
+	var enemy_position = (GameManager.player_mngr.global_position
+		+ Utils.random_offset_vector())
+	if option == 0 or option == 1:
+		path_follower = PathFollower.instantiate()
+		path_follower.set_global_position(enemy_position)
+		path_follower.curve = Curve2D.new()
+		path_follower.set_new_path()
+		path_follower.id = id_count
+		path_follower.set_enemy_node(enemy)
+	if option == 1:
+		enemy.get_node("Area2D").body_entered.connect(path_follower._on_body_entered_enemy_area)
+		enemy.get_node("Area2D").body_exited.connect(path_follower._on_body_exited_enemy_area)
+	if option == 2:
+		enemy.get_child(0).set_follow_enemy(true)
+		enemy.set_global_position(enemy_position)
+
+	enemy.get_child(0).enemy_died.connect(_handle_enemy_died)
+	enemy.get_child(0).id = id_count
+	id_count += 1
+
+	if option == 0 or option == 1:
+		return path_follower
+	else:
+		return enemy
+
+
+func create_random_type_enemy():
 	var random_num = rng.randi_range(0, 3)
 	var enemy
 	if random_num == 0:
@@ -68,5 +86,8 @@ func create_random_enemy():
 func _handle_enemy_died(_id):
 	for child in get_children():
 		if "id" in child and child.id == _id:
+			child.queue_free()
+			break
+		if child.get_child_count() > 0 and "id" in child.get_child(0) and child.get_child(0).id == _id:
 			child.queue_free()
 			break

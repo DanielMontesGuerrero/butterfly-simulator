@@ -36,8 +36,6 @@ script = ExtResource("4_fnkw6")
 [node name="Debug" type="Node2D" parent="."]
 script = ExtResource("5_l6fbu")
 
-[node name="EnemySpawner" parent="." instance=ExtResource("14_t11du")]
-
 [node name="Spike" parent="." instance=ExtResource("7_sy0at")]
 position = Vector2(413, 250)
 
@@ -59,3 +57,6 @@ scale = Vector2(0.1, 0.1)
 [node name="Heart" parent="." instance=ExtResource("12_uv4gb")]
 position = Vector2(81, -461)
 scale = Vector2(0.02, 0.02)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("14_t11du")]
+position = Vector2(-306, 708)

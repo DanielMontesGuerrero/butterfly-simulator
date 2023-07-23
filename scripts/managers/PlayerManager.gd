@@ -38,6 +38,7 @@ func _process(delta):
 	if collision != null:
 		var body = collision.get_collider()
 		if body.is_in_group("Leaf"):
+			body.kill(true)
 			receive_damage()
 
 

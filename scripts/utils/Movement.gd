@@ -41,3 +41,10 @@ static func get_random_curve():
 		curve.append([points[i], points[i + 1], points[i + 2]])
 	curve.append([points[NUM_POINTS - 2], points[NUM_POINTS - 1], Vector2.ZERO])
 	return curve
+
+
+static func get_directed_curve(last_point: Vector2):
+	return [
+		[Vector2.ZERO, Vector2.ZERO, Vector2.ZERO],
+		[last_point, Vector2.ZERO, Vector2.ZERO],
+	]
