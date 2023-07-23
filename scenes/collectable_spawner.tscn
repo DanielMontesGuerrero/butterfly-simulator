@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0lhp4ys1gh4e"]
+
+[ext_resource type="Script" path="res://scripts/managers/CollectableSpawnerManager.gd" id="1_lu45x"]
+
+[node name="CollectableSpawner" type="Node2D"]
+script = ExtResource("1_lu45x")

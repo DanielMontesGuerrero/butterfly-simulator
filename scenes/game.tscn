@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://t5yx4sgs1brp"]
+[gd_scene load_steps=14 format=3 uid="uid://t5yx4sgs1brp"]
 
 [ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="1_etpx5"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c1a8p72p6gdbf" path="res://scenes/orbe_collectable.tscn" id="10_dlxlu"]
 [ext_resource type="PackedScene" uid="uid://byuqah18lh4cc" path="res://scenes/flower_collectable.tscn" id="11_6r1h2"]
 [ext_resource type="PackedScene" uid="uid://dph7io023khpi" path="res://scenes/heart_collectable.tscn" id="12_uv4gb"]
+[ext_resource type="PackedScene" uid="uid://c0lhp4ys1gh4e" path="res://scenes/collectable_spawner.tscn" id="13_qxqa2"]
 [ext_resource type="PackedScene" uid="uid://bucdi5tnplt6q" path="res://scenes/enemy_spawner.tscn" id="14_t11du"]
 
 [node name="Game" type="Node2D"]
@@ -60,3 +61,6 @@ scale = Vector2(0.02, 0.02)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("14_t11du")]
 position = Vector2(-306, 708)
+
+[node name="CollectableSpawner" parent="." instance=ExtResource("13_qxqa2")]
+position = Vector2(-198, 429)
