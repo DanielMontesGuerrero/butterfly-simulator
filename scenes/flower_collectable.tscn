@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://byuqah18lh4cc"]
+
+[ext_resource type="Script" path="res://scripts/managers/CollectableManager.gd" id="1_jrj00"]
+[ext_resource type="Texture2D" uid="uid://qjkmplqnohwc" path="res://assets/sprites/flower.png" id="2_lumrb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e1bki"]
+radius = 224.002
+
+[node name="Flower" type="Node2D"]
+script = ExtResource("1_jrj00")
+collectable_type = "flower"
+
+[node name="Flower" type="Sprite2D" parent="."]
+texture = ExtResource("2_lumrb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_e1bki")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

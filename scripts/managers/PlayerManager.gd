@@ -38,5 +38,13 @@ func get_num_lives():
 
 func receive_damage():
 	butterfly.receive_damage()
-	if butterfly.num_lives <= 0:
+	if butterfly.num_lives < 0:
 		GameManager.end_game()
+
+
+func collect_item(item_type: String):
+	match item_type:
+		"heart":
+			butterfly.add_live()
+		_:
+			pass

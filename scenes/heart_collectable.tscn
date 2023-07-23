@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dph7io023khpi"]
+
+[ext_resource type="Script" path="res://scripts/managers/CollectableManager.gd" id="1_ost61"]
+[ext_resource type="Texture2D" uid="uid://b2g2gmpxmdvwl" path="res://assets/sprites/heart.png" id="2_itljh"]
+
+[node name="Heart" type="Node2D"]
+script = ExtResource("1_ost61")
+collectable_type = "heart"
+
+[node name="Heart" type="Sprite2D" parent="."]
+texture = ExtResource("2_itljh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(129.638, 112.974)
+polygon = PackedVector2Array(0, 9.14367, 4.73627, 4.74444, 8.2229, 0.0708126, 9.2257, -2.92987, 9.1177, -5.25783, 7.86035, -7.78938, 5.90105, -9.05516, 3.5252, -9.05516, 1.72018, -8.20541, 0, -6.7803, -1.29592, -7.94871, -3.53292, -9.05516, -6.14018, -8.96664, -8.03006, -7.53269, -9.03285, -5.49683, -9.2257, -2.96528, -8.18433, 0.0885157, -4.56657, 4.97458)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

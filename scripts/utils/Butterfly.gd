@@ -61,3 +61,7 @@ func set_gravity(dir):
 
 func receive_damage():
 	num_lives -= 1
+
+
+func add_live():
+	num_lives += 1
