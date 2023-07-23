@@ -4,11 +4,20 @@ extends CharacterBody2D
 const Butterfly = preload("res://scripts/utils/Butterfly.gd")
 
 var butterfly := Butterfly.new()
+var is_inmune := false
+var timer: Timer
+const INMUNE_TIME := 3.0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameManager.player_mngr = self
+	timer = Timer.new()
+	timer.wait_time = INMUNE_TIME
+	timer.autostart = false
+	timer.one_shot = true
+	timer.timeout.connect(set_not_inmune)
+	add_child(timer)
 
 
 func _input(event):
@@ -25,7 +34,11 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	butterfly.process(delta)
-	move_and_collide(butterfly.velocity)
+	var collision = move_and_collide(butterfly.velocity)
+	if collision != null:
+		var body = collision.get_collider()
+		if body.is_in_group("Leaf"):
+			receive_damage()
 
 
 func set_gravity(gravity_dir: Vector2):
@@ -37,9 +50,13 @@ func get_num_lives():
 
 
 func receive_damage():
+	if is_inmune:
+		return
 	butterfly.receive_damage()
 	if butterfly.num_lives < 0:
 		GameManager.end_game()
+	else:
+		set_inmune()
 
 
 func collect_item(item_type: String):
@@ -48,3 +65,22 @@ func collect_item(item_type: String):
 			butterfly.add_live()
 		_:
 			pass
+
+
+func set_inmune():
+	is_inmune = true
+	timer.start()
+	play_blink()
+
+
+func set_not_inmune():
+	is_inmune = false
+	stop_blink()
+
+
+func play_blink():
+	get_node("AnimationPlayer").play("blink")
+	
+	
+func stop_blink():
+	get_node("AnimationPlayer").stop()
