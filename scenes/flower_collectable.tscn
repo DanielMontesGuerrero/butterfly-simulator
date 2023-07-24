@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://byuqah18lh4cc"]
+[gd_scene load_steps=5 format=3 uid="uid://byuqah18lh4cc"]
 
 [ext_resource type="Script" path="res://scripts/managers/CollectableManager.gd" id="1_jrj00"]
 [ext_resource type="Texture2D" uid="uid://qjkmplqnohwc" path="res://assets/sprites/flower.png" id="2_lumrb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e1bki"]
 radius = 224.002
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eg5u8"]
+closed = false
+cull_mode = 1
+polygon = PackedVector2Array(-39, 240, 2, 224, 22, 202, 93, 201, 134, 145, 190, 126, 215, 105, 202, 55, 216, 35, 190, 18, 215, -14, 218, -49, 190, -82, 184, -138, 142, -159, 127, -193, 93, -194, 75, -229, 47, -237, 32, -218, 11, -243, -5, -237, -20, -213, -27, -244, -52, -222, -66, -192, -127, -189, -144, -186, -177, -152, -179, -127, -173, -95, -204, -76, -216, -64, -211, -37, -227, -17, -233, 0, -202, 19, -202, 42, -192, 57, -194, 74, -187, 106, -189, 124, -173, 154, -145, 168, -86, 174, -76, 203, -60, 225)
 
 [node name="Flower" type="Node2D"]
 script = ExtResource("1_jrj00")
@@ -17,5 +22,8 @@ texture = ExtResource("2_lumrb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_e1bki")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_eg5u8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

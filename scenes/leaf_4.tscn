@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cto50ppl3rysv"]
+[gd_scene load_steps=5 format=3 uid="uid://cto50ppl3rysv"]
 
 [ext_resource type="Script" path="res://scripts/managers/LeafManager.gd" id="1_cyitf"]
 [ext_resource type="Texture2D" uid="uid://c00sdefvtwbfp" path="res://assets/sprites/leaf_4.png" id="1_ecs34"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_db10e"]
+closed = false
+cull_mode = 1
+polygon = PackedVector2Array(-3956, 3526, -3420, 2860, -2908, 2888, -2003, 2729, 358, 1633, 1758, 540, 2926, -797, 3871, -1426, 3964, -2441, 3254, -3408, 2146, -3528, -1415, -2391, -3093, -1270, -3504, -280, -3771, 1199, -3776, 2096, -3639, 2685)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x2hm4"]
 radius = 13756.8
@@ -17,6 +22,9 @@ texture = ExtResource("1_ecs34")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
 scale = Vector2(435.361, 373.433)
 polygon = PackedVector2Array(-9.06604, 9.45015, -7.87162, 7.67206, -6.691, 7.75239, -4.61226, 7.29448, 0.813118, 4.3649, 4.01046, 1.48353, 6.71626, -2.13693, 8.8662, -3.81594, 9.0913, -6.52326, 7.46277, -9.11274, 4.92924, -9.45551, -3.29152, -6.30099, -7.10674, -3.41159, -8.04389, -0.781934, -8.66866, 3.26163, -8.68474, 5.60743, -8.35628, 7.18469)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="CharacterBody2D"]
+occluder = SubResource("OccluderPolygon2D_db10e")
 
 [node name="Area2D" type="Area2D" parent="."]
 

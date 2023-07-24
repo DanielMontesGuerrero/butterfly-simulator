@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhdmijtkopgav"]
+[gd_scene load_steps=4 format=3 uid="uid://bhdmijtkopgav"]
 
 [ext_resource type="Script" path="res://scripts/managers/ObstacleManager.gd" id="1_iq2l6"]
 [ext_resource type="Texture2D" uid="uid://cydns2cl4obm5" path="res://assets/sprites/obstacle_5.png" id="2_tlqkj"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5jrtx"]
+closed = false
+cull_mode = 1
+polygon = PackedVector2Array(258, 1, 247, -44, 386, -239, 586, -179, 418, -331, 543, -706, 497, -917, 290, -932, 172, -1029, 224, -1246, 462, -1327, 192, -1370, 109, -1828, -50, -2126, 61, -1653, -55, -1306, -341, -1443, -272, -1825, -960, -2480, -979, -2457, -638, -1805, -420, -1512, -586, -1149, -338, -1115, -189, -858, -201, -453, -113, -298, -17, -3)
 
 [node name="Obstacle5" type="Node2D"]
 script = ExtResource("1_iq2l6")
@@ -17,5 +22,8 @@ texture = ExtResource("2_tlqkj")
 position = Vector2(-190, -1226)
 scale = Vector2(80.8906, 127.578)
 polygon = PackedVector2Array(5.52598, 9.61763, 5.40236, 9.25706, 7.13309, 7.73643, 9.60557, 8.21457, 7.51633, 7.02314, 9.04926, 4.08377, 8.49296, 2.42988, 5.93394, 2.30447, 4.48754, 1.55983, 5.10566, -0.148928, 8.06027, -0.799509, 4.6977, -1.12088, 3.72108, -4.68732, 1.71837, -7.04666, 3.07823, -3.37048, 1.68128, -0.619227, -1.85436, -1.68524, -1.01372, -4.703, -7.38034, -8.72406, -9.5314, -9.85278, -9.75392, -9.65682, -5.51362, -4.50704, -2.84335, -2.25744, -4.87078, 0.587875, -1.81727, 0.877893, -0.0123625, 2.8845, -0.148349, 6.03551, 0.964266, 7.27397, 2.12633, 9.5706)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_5jrtx")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1a8p72p6gdbf"]
+[gd_scene load_steps=5 format=3 uid="uid://c1a8p72p6gdbf"]
 
 [ext_resource type="Script" path="res://scripts/managers/CollectableManager.gd" id="1_hch6n"]
 [ext_resource type="Texture2D" uid="uid://dxcxooexfin33" path="res://assets/sprites/circle.png" id="2_187np"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_481to"]
 radius = 324.154
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2wk04"]
+closed = false
+cull_mode = 1
+polygon = PackedVector2Array(0, 326, 102, 310, 212, 247, 289, 145, 323, 47, 326, -2, 319, -92, 280, -188, 205, -279, 99, -335, -2, -346, -119, -321, -201, -266, -253, -200, -299, -114, -314, 2, -302, 90, -272, 162, -221, 226, -159, 282, -75, 316)
 
 [node name="Orbe" type="Node2D"]
 script = ExtResource("1_hch6n")
@@ -17,5 +22,8 @@ shape = SubResource("CircleShape2D_481to")
 
 [node name="Circle" type="Sprite2D" parent="."]
 texture = ExtResource("2_187np")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_2wk04")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

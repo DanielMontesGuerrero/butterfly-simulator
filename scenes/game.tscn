@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=3 uid="uid://t5yx4sgs1brp"]
+[gd_scene load_steps=19 format=3 uid="uid://t5yx4sgs1brp"]
 
-[ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="1_etpx5"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
 [ext_resource type="Script" path="res://scripts/managers/ScoreManager.gd" id="4_fnkw6"]
 [ext_resource type="Script" path="res://scripts/managers/DebugManager.gd" id="5_l6fbu"]
@@ -13,12 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://dph7io023khpi" path="res://scenes/heart_collectable.tscn" id="12_uv4gb"]
 [ext_resource type="PackedScene" uid="uid://c0lhp4ys1gh4e" path="res://scenes/collectable_spawner.tscn" id="13_qxqa2"]
 [ext_resource type="PackedScene" uid="uid://bucdi5tnplt6q" path="res://scenes/enemy_spawner.tscn" id="14_t11du"]
+[ext_resource type="PackedScene" uid="uid://xiom60jrceg1" path="res://scenes/obstacle_2.tscn" id="14_wqrap"]
+[ext_resource type="PackedScene" uid="uid://dydsws504k778" path="res://scenes/obstacle_3.tscn" id="15_70gl2"]
+[ext_resource type="PackedScene" uid="uid://be87k854qpw6c" path="res://scenes/obstacle_4.tscn" id="16_1eshd"]
+[ext_resource type="PackedScene" uid="uid://bhdmijtkopgav" path="res://scenes/obstacle_5.tscn" id="17_nc3xx"]
+[ext_resource type="PackedScene" uid="uid://dex3l1cq48tf1" path="res://scenes/obstacle_6.tscn" id="18_d33ti"]
+[ext_resource type="PackedScene" uid="uid://bmjvolvo6ilwv" path="res://scenes/obstacle_7.tscn" id="19_tl25n"]
 
 [node name="Game" type="Node2D"]
-
-[node name="Background" type="Sprite2D" parent="."]
-scale = Vector2(3.5655, 2.99086)
-texture = ExtResource("1_etpx5")
 
 [node name="Player" parent="." instance=ExtResource("2_b3hvr")]
 
@@ -40,23 +41,23 @@ script = ExtResource("5_l6fbu")
 [node name="Spike" parent="." instance=ExtResource("7_sy0at")]
 position = Vector2(413, 250)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UILayer" type="CanvasLayer" parent="."]
 
-[node name="Control" parent="CanvasLayer" instance=ExtResource("6_3jlau")]
+[node name="Control" parent="UILayer" instance=ExtResource("6_3jlau")]
 
 [node name="Obstacle1" parent="." instance=ExtResource("9_d4nu1")]
-position = Vector2(-902, 967)
+position = Vector2(-907, 846)
 
 [node name="Orbe" parent="." instance=ExtResource("10_dlxlu")]
-position = Vector2(882, -392)
+position = Vector2(804, -394)
 scale = Vector2(0.05, 0.05)
 
 [node name="Flower" parent="." instance=ExtResource("11_6r1h2")]
-position = Vector2(-677, -233)
+position = Vector2(-755, -367)
 scale = Vector2(0.1, 0.1)
 
 [node name="Heart" parent="." instance=ExtResource("12_uv4gb")]
-position = Vector2(81, -461)
+position = Vector2(151, -429)
 scale = Vector2(0.02, 0.02)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("14_t11du")]
@@ -64,3 +65,26 @@ position = Vector2(-306, 708)
 
 [node name="CollectableSpawner" parent="." instance=ExtResource("13_qxqa2")]
 position = Vector2(-198, 429)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.277528, 0.277528, 0.277528, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Obstacle2" parent="." instance=ExtResource("14_wqrap")]
+position = Vector2(311, 1122)
+
+[node name="Obstacle3" parent="." instance=ExtResource("15_70gl2")]
+position = Vector2(-2406, 555)
+
+[node name="Obstacle4" parent="." instance=ExtResource("16_1eshd")]
+position = Vector2(2262, 711)
+
+[node name="Obstacle5" parent="." instance=ExtResource("17_nc3xx")]
+position = Vector2(-2061, -606)
+
+[node name="Obstacle6" parent="." instance=ExtResource("18_d33ti")]
+position = Vector2(1774, -738)
+
+[node name="Obstacle7" parent="." instance=ExtResource("19_tl25n")]
+position = Vector2(83, -1090)
