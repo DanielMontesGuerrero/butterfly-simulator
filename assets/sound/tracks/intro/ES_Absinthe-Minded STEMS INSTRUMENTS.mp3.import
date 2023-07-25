@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jtnarpeltu8u"
+path="res://.godot/imported/ES_Absinthe-Minded STEMS INSTRUMENTS.mp3-a19793c49c169c7a0f5d784406958a04.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/intro/ES_Absinthe-Minded STEMS INSTRUMENTS.mp3"
+dest_files=["res://.godot/imported/ES_Absinthe-Minded STEMS INSTRUMENTS.mp3-a19793c49c169c7a0f5d784406958a04.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

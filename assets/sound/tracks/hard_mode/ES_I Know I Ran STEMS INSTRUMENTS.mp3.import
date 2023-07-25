@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwd7unqbjfmwk"
+path="res://.godot/imported/ES_I Know I Ran STEMS INSTRUMENTS.mp3-cb119b4df6283962b45e60ecc32b4eac.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/hard_mode/ES_I Know I Ran STEMS INSTRUMENTS.mp3"
+dest_files=["res://.godot/imported/ES_I Know I Ran STEMS INSTRUMENTS.mp3-cb119b4df6283962b45e60ecc32b4eac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

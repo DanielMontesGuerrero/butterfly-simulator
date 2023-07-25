@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sngrkw0ejwsm"
+path="res://.godot/imported/Easily Distracted STEMS MELODY.mp3-ded8ca7442dbdfc53c740d3c1fe6f705.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/bonus_track/Easily Distracted STEMS MELODY.mp3"
+dest_files=["res://.godot/imported/Easily Distracted STEMS MELODY.mp3-ded8ca7442dbdfc53c740d3c1fe6f705.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

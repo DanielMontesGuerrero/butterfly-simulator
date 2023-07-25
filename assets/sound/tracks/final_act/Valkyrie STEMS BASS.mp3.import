@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0i3fx65jpuqs"
+path="res://.godot/imported/Valkyrie STEMS BASS.mp3-b94cc44700b0ab3853411c5bd9dcb614.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/final_act/Valkyrie STEMS BASS.mp3"
+dest_files=["res://.godot/imported/Valkyrie STEMS BASS.mp3-b94cc44700b0ab3853411c5bd9dcb614.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

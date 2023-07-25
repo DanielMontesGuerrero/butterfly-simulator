@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dio60m8a372ku"
+path="res://.godot/imported/ES_Writings on the Wall.mp3-b5afde907c99558228426ff521667ec6.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/level2/ES_Writings on the Wall.mp3"
+dest_files=["res://.godot/imported/ES_Writings on the Wall.mp3-b5afde907c99558228426ff521667ec6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

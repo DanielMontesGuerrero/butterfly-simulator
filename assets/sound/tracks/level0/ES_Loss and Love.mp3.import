@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnqt1oj3m68vo"
+path="res://.godot/imported/ES_Loss and Love.mp3-55998d8e7a715c71f44234d1dd91b8e5.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/level0/ES_Loss and Love.mp3"
+dest_files=["res://.godot/imported/ES_Loss and Love.mp3-55998d8e7a715c71f44234d1dd91b8e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

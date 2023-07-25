@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmi4qn7k0krei"
+path="res://.godot/imported/ES_Writings on the Wall STEMS DRUMS.mp3-b216deecbe88297f7e9dda1bdb9f6338.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/level2/ES_Writings on the Wall STEMS DRUMS.mp3"
+dest_files=["res://.godot/imported/ES_Writings on the Wall STEMS DRUMS.mp3-b216deecbe88297f7e9dda1bdb9f6338.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4g4pa5uv8qvl"
+path="res://.godot/imported/ES_Absinthe-Minded STEMS MELODY.mp3-6d1e79cbbf2e07f85613750a185a9633.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/intro/ES_Absinthe-Minded STEMS MELODY.mp3"
+dest_files=["res://.godot/imported/ES_Absinthe-Minded STEMS MELODY.mp3-6d1e79cbbf2e07f85613750a185a9633.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

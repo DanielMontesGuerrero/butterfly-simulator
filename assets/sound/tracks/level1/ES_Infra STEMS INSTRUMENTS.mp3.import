@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://do6fuub7funkq"
+path="res://.godot/imported/ES_Infra STEMS INSTRUMENTS.mp3-3759756f44f18f1dd644cf565acf45fd.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/level1/ES_Infra STEMS INSTRUMENTS.mp3"
+dest_files=["res://.godot/imported/ES_Infra STEMS INSTRUMENTS.mp3-3759756f44f18f1dd644cf565acf45fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

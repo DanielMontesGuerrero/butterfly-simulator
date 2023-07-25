@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgjl7q0enilke"
+path="res://.godot/imported/Easily Distracted.mp3-946bd7155768a6280492556e0d94e0b3.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/bonus_track/Easily Distracted.mp3"
+dest_files=["res://.godot/imported/Easily Distracted.mp3-946bd7155768a6280492556e0d94e0b3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

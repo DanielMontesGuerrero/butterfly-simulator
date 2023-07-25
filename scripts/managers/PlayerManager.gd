@@ -18,6 +18,10 @@ func _ready():
 	timer.one_shot = true
 	timer.timeout.connect(set_not_inmune)
 	add_child(timer)
+	GameManager.sound_mngr.set_pe_players([
+		get_node("AudioStreamPlayer2D"),
+		get_node("AudioStreamPlayer2D2"),
+	])
 
 
 func _input(event):
@@ -29,6 +33,7 @@ func _input(event):
 			+ GameManager.camera_mngr.get_screen_center_position())
 		GameManager.debug_mngr.set_touch_position(touch_position)
 		butterfly.directed_jump(touch_position)
+		GameManager.sound_mngr.play_player_effect("jump")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,6 +59,7 @@ func receive_damage():
 	if is_inmune:
 		return
 	butterfly.receive_damage()
+	GameManager.sound_mngr.play_player_effect("damage")
 	if butterfly.num_lives < 0:
 		GameManager.end_game()
 	else:

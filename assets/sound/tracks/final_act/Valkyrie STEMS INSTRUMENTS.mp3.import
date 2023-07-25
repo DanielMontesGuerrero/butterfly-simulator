@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvg1vnue3bmec"
+path="res://.godot/imported/Valkyrie STEMS INSTRUMENTS.mp3-1fe2235a6faa333a8084a2118ab8deac.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/final_act/Valkyrie STEMS INSTRUMENTS.mp3"
+dest_files=["res://.godot/imported/Valkyrie STEMS INSTRUMENTS.mp3-1fe2235a6faa333a8084a2118ab8deac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

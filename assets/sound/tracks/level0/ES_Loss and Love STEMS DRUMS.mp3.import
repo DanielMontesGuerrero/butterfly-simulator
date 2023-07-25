@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca5pd63mnniyy"
+path="res://.godot/imported/ES_Loss and Love STEMS DRUMS.mp3-7170dd6f91532cc6f9aa976db52243e1.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/level0/ES_Loss and Love STEMS DRUMS.mp3"
+dest_files=["res://.godot/imported/ES_Loss and Love STEMS DRUMS.mp3-7170dd6f91532cc6f9aa976db52243e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

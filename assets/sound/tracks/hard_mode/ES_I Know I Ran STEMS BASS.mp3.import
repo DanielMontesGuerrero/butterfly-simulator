@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxtwdkwb2cnxi"
+path="res://.godot/imported/ES_I Know I Ran STEMS BASS.mp3-8eb757401f6d1cee7875e606787f0841.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/hard_mode/ES_I Know I Ran STEMS BASS.mp3"
+dest_files=["res://.godot/imported/ES_I Know I Ran STEMS BASS.mp3-8eb757401f6d1cee7875e606787f0841.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

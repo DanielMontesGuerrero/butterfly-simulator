@@ -16,5 +16,6 @@ func _process(_delta):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
+		GameManager.sound_mngr.play_player_effect("collect_" + collectable_type)
 		body.collect_item(collectable_type)
 		queue_free()

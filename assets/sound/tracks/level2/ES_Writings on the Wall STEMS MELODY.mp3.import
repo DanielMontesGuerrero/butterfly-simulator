@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj05jhk2njv4y"
+path="res://.godot/imported/ES_Writings on the Wall STEMS MELODY.mp3-554fedd0064a039c2cf8b1b2befb0e72.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/level2/ES_Writings on the Wall STEMS MELODY.mp3"
+dest_files=["res://.godot/imported/ES_Writings on the Wall STEMS MELODY.mp3-554fedd0064a039c2cf8b1b2befb0e72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
