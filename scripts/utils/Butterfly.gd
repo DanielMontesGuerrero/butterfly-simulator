@@ -55,6 +55,13 @@ func directed_jump(direction_point: Vector2):
 	jump_velocity += jump_inc
 
 
+func bounce(collision: KinematicCollision2D):
+	var copy = velocity.normalized().bounce(collision.get_normal())
+	var angle = copy.angle_to(velocity.normalized())
+	velocity = velocity.rotated(-angle)
+	jump_velocity = jump_velocity.rotated(-angle)
+
+
 func set_gravity(dir):
 	gravity_velocity = gravity_factor * dir
 

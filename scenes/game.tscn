@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scripts/managers/GameLevelManager.gd" id="1_kgkk8"]
 [ext_resource type="PackedScene" uid="uid://c1e1y6hpie350" path="res://scenes/player.tscn" id="2_b3hvr"]
-[ext_resource type="Script" path="res://scripts/managers/ScoreManager.gd" id="4_fnkw6"]
 [ext_resource type="Script" path="res://scripts/managers/DebugManager.gd" id="5_l6fbu"]
 [ext_resource type="PackedScene" uid="uid://tqvl68m140t6" path="res://scenes/game_status.tscn" id="6_3jlau"]
 [ext_resource type="Script" path="res://scripts/managers/CameraManager.gd" id="6_hskwl"]
@@ -18,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://be87k854qpw6c" path="res://scenes/obstacle_4.tscn" id="16_1eshd"]
 [ext_resource type="PackedScene" uid="uid://bhdmijtkopgav" path="res://scenes/obstacle_5.tscn" id="17_nc3xx"]
 [ext_resource type="PackedScene" uid="uid://dex3l1cq48tf1" path="res://scenes/obstacle_6.tscn" id="18_d33ti"]
+[ext_resource type="PackedScene" uid="uid://t08x13bj5x17" path="res://scenes/maze.tscn" id="19_br4yp"]
 [ext_resource type="PackedScene" uid="uid://bmjvolvo6ilwv" path="res://scenes/obstacle_7.tscn" id="19_tl25n"]
 
 [node name="Game" type="Node2D"]
@@ -29,13 +29,6 @@ script = ExtResource("1_kgkk8")
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 script = ExtResource("6_hskwl")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 495.0
-offset_top = 3.0
-offset_right = 535.0
-offset_bottom = 26.0
-script = ExtResource("4_fnkw6")
 
 [node name="Debug" type="Node2D" parent="."]
 script = ExtResource("5_l6fbu")
@@ -69,7 +62,7 @@ position = Vector2(-306, 708)
 position = Vector2(-198, 429)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.277528, 0.277528, 0.277528, 1)
+color = Color(0.184314, 0.184314, 0.184314, 1)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -90,3 +83,6 @@ position = Vector2(1774, -738)
 
 [node name="Obstacle7" parent="." instance=ExtResource("19_tl25n")]
 position = Vector2(83, -1090)
+
+[node name="Node2D" parent="." instance=ExtResource("19_br4yp")]
+position = Vector2(-8743, -7064)

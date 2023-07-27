@@ -41,6 +41,7 @@ func _process(delta):
 	butterfly.process(delta)
 	var collision = move_and_collide(butterfly.velocity)
 	if collision != null:
+		butterfly.bounce(collision)
 		var body = collision.get_collider()
 		if body.is_in_group("Leaf"):
 			body.kill(true)
