@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxx65wnun7ari"
+path="res://.godot/imported/ES_Where Do We Go STEMS INSTRUMENTS.mp3-e0dd5a00b5aeb04704deab1a0d1bb41a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/win_theme/ES_Where Do We Go STEMS INSTRUMENTS.mp3"
+dest_files=["res://.godot/imported/ES_Where Do We Go STEMS INSTRUMENTS.mp3-e0dd5a00b5aeb04704deab1a0d1bb41a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

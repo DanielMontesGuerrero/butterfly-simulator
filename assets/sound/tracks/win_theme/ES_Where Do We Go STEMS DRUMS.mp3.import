@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fvedv2v47j77"
+path="res://.godot/imported/ES_Where Do We Go STEMS DRUMS.mp3-1ce5303c4725c4d8f6e780db1330fe6a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/win_theme/ES_Where Do We Go STEMS DRUMS.mp3"
+dest_files=["res://.godot/imported/ES_Where Do We Go STEMS DRUMS.mp3-1ce5303c4725c4d8f6e780db1330fe6a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

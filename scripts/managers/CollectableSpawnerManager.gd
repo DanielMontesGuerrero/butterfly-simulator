@@ -49,10 +49,10 @@ func create_random_type_collectable():
 		0:
 			collectable = HeartCollectable.instantiate()
 			collectable.scale = Vector2(0.02, 0.02)
-		1:
+		2:
 			collectable = FlowerCollectable.instantiate()
 			collectable.scale = Vector2(0.1, 0.1)
-		2:
+		1:
 			collectable = OrbeCollectable.instantiate()
 			collectable.scale = Vector2(0.05, 0.05)
 		_:

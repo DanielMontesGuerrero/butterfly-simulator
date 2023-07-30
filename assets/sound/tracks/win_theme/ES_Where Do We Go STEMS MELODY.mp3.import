@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctuahpf8koiiq"
+path="res://.godot/imported/ES_Where Do We Go STEMS MELODY.mp3-3350b8b30bb393fbc8cab21a4c478b37.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/win_theme/ES_Where Do We Go STEMS MELODY.mp3"
+dest_files=["res://.godot/imported/ES_Where Do We Go STEMS MELODY.mp3-3350b8b30bb393fbc8cab21a4c478b37.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

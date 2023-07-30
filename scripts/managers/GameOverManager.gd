@@ -7,6 +7,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameManager.sound_mngr.play_game_over_theme()
+	find_child("ScoreLabel").set_text(str(GameManager.total_score))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,6 +16,5 @@ func _process(_delta):
 
 
 func _input(event):
-	if (event is InputEventKey) or (event is InputEventMouseButton):
-		if event.pressed:
-			GameManager.go_to_start_menu()
+	if event.is_action_pressed("ui_accept"):
+		GameManager.go_to_start_menu()

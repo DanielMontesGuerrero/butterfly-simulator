@@ -16,6 +16,7 @@ const jump_effect := preload("res://assets/sound/effects/whir.mp3")
 const wind_blow_effect := preload("res://assets/sound/effects/blow.mp3")
 const wind_storm_effect := preload("res://assets/sound/effects/wind_storm.mp3")
 const bounce_effect := preload("res://assets/sound/effects/bounce.mp3")
+const win_theme := preload("res://assets/sound/tracks/win_theme/ES_Where Do We Go.mp3")
 
 
 func _ready():
@@ -45,6 +46,10 @@ func play_bg_theme(theme: AudioStream):
 
 func play_intro_theme():
 	play_bg_theme(intro_theme)
+
+
+func play_win_theme():
+	play_bg_theme(win_theme)
 
 
 func play_level_theme(level: int):
@@ -82,6 +87,8 @@ func play_player_effect(effect: String):
 		"collect_orbe":
 			play_pe_effect(collect_orbe_effect)
 		"collect_flower":
+			play_pe_effect(collect_flower_effect)
+		"collect_star":
 			play_pe_effect(collect_flower_effect)
 		"collect_heart":
 			play_pe_effect(collect_heart_effect)

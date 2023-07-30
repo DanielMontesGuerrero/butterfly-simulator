@@ -111,6 +111,8 @@ func collect_item(item_type: String):
 			increase_visibility()
 		"flower":
 			GameManager.level_mngr.increase_score()
+		"star":
+			GameManager.win_game()
 		_:
 			pass
 

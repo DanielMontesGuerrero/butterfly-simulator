@@ -85,7 +85,7 @@ func show_wind_gust(force: bool):
 		for i in NUM_WIND_GUSTS:
 			var mngr = wind_gust_scene.instantiate()
 			wind_gust_mngrs.append(mngr)
-			get_node("UILayer").add_child(mngr)
+			get_node("Level1").get_node("UILayer").add_child(mngr)
 	else:
 		return
 	var angle = GameManager.player_mngr.butterfly.gravity_velocity.angle()

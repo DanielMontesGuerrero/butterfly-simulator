@@ -12,4 +12,4 @@ func _process(_delta):
 
 
 func _on_button_pressed():
-	GameManager.go_to_game()
+	GameManager.go_to_level(0)

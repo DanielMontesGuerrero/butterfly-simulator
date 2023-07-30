@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1e1y6hpie350"]
+[gd_scene load_steps=11 format=3 uid="uid://c1e1y6hpie350"]
 
 [ext_resource type="Texture2D" uid="uid://btmipb608crhb" path="res://assets/sprites/bf.png" id="1_6ll6e"]
 [ext_resource type="Script" path="res://scripts/managers/PlayerManager.gd" id="1_po5ft"]
 [ext_resource type="Texture2D" uid="uid://cx8rruibvjhu" path="res://assets/textures/player_ligth.tres" id="3_l65p3"]
 [ext_resource type="Texture2D" uid="uid://oq64el7mufcb" path="res://assets/backgrounds/white.jpg" id="3_m0mok"]
 [ext_resource type="SpriteFrames" uid="uid://dkjmxhqkj6vje" path="res://assets/sprites/animations/butterfly_sprite_frames.tres" id="4_80j6l"]
+[ext_resource type="Script" path="res://scripts/managers/CameraManager.gd" id="6_l744f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pi6r5"]
 size = Vector2(46, 31.75)
@@ -89,3 +90,8 @@ sprite_frames = ExtResource("4_80j6l")
 animation = &"flutter_down"
 frame = 6
 frame_progress = 0.798308
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+script = ExtResource("6_l744f")

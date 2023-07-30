@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cccjiqqc5dmyg"]
+[gd_scene load_steps=2 format=3 uid="uid://cccjiqqc5dmyg"]
 
 [ext_resource type="Script" path="res://scripts/managers/StartMenuManager.gd" id="1_f6k65"]
-[ext_resource type="PackedScene" uid="uid://t5yx4sgs1brp" path="res://scenes/game.tscn" id="2_chjmr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f6k65")
-game_scene = ExtResource("2_chjmr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

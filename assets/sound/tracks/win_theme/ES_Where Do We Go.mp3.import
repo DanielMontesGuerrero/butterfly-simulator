@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mbpcumq5dlx0"
+path="res://.godot/imported/ES_Where Do We Go.mp3-2f88e2a054a7d3fc161ede49ed0aa179.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/tracks/win_theme/ES_Where Do We Go.mp3"
+dest_files=["res://.godot/imported/ES_Where Do We Go.mp3-2f88e2a054a7d3fc161ede49ed0aa179.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://52slpyt7hv7q"]
+
+[ext_resource type="PackedScene" uid="uid://t08x13bj5x17" path="res://scenes/maze.tscn" id="1_i18en"]
+[ext_resource type="PackedScene" uid="uid://c0lhp4ys1gh4e" path="res://scenes/collectable_spawner.tscn" id="2_b1lt0"]
+[ext_resource type="PackedScene" uid="uid://bucdi5tnplt6q" path="res://scenes/enemy_spawner.tscn" id="3_8ii7l"]
+[ext_resource type="PackedScene" uid="uid://bd6i6h3gqlit4" path="res://scenes/wind_gust.tscn" id="4_esy3m"]
+[ext_resource type="PackedScene" uid="uid://tqvl68m140t6" path="res://scenes/game_status.tscn" id="5_cl5pu"]
+[ext_resource type="PackedScene" uid="uid://c1jtl1p2hu1au" path="res://scenes/obstacle_1.tscn" id="6_p3ml7"]
+[ext_resource type="PackedScene" uid="uid://xiom60jrceg1" path="res://scenes/obstacle_2.tscn" id="7_ukxlx"]
+[ext_resource type="PackedScene" uid="uid://dydsws504k778" path="res://scenes/obstacle_3.tscn" id="8_3jg2g"]
+[ext_resource type="PackedScene" uid="uid://be87k854qpw6c" path="res://scenes/obstacle_4.tscn" id="9_njxk7"]
+[ext_resource type="PackedScene" uid="uid://bhdmijtkopgav" path="res://scenes/obstacle_5.tscn" id="10_s2kxt"]
+[ext_resource type="PackedScene" uid="uid://dex3l1cq48tf1" path="res://scenes/obstacle_6.tscn" id="11_2xb4x"]
+[ext_resource type="PackedScene" uid="uid://bmjvolvo6ilwv" path="res://scenes/obstacle_7.tscn" id="12_qa3ja"]
+[ext_resource type="PackedScene" uid="uid://cqobar0p7tl3x" path="res://scenes/star_collectable.tscn" id="13_fmtrr"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="CollectableSpawner" parent="." instance=ExtResource("2_b1lt0")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("3_8ii7l")]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="WindGust" parent="UILayer" instance=ExtResource("4_esy3m")]
+visible = false
+position = Vector2(882, 557)
+
+[node name="Control" parent="UILayer" instance=ExtResource("5_cl5pu")]
+
+[node name="Maze" parent="." instance=ExtResource("1_i18en")]
+position = Vector2(-8901, -6485)
+
+[node name="Obstacle1" parent="." instance=ExtResource("6_p3ml7")]
+position = Vector2(-1375, 1280)
+rotation = 0.958186
+scale = Vector2(2, 2)
+
+[node name="Obstacle2" parent="." instance=ExtResource("7_ukxlx")]
+position = Vector2(-3090, 1764)
+rotation = 4.66701
+scale = Vector2(2, 2)
+
+[node name="Obstacle3" parent="." instance=ExtResource("8_3jg2g")]
+position = Vector2(2615, 792)
+
+[node name="Obstacle4" parent="." instance=ExtResource("9_njxk7")]
+position = Vector2(-4151, 5408)
+scale = Vector2(2, 2)
+
+[node name="Obstacle5" parent="." instance=ExtResource("10_s2kxt")]
+position = Vector2(1132, 3490)
+
+[node name="Obstacle6" parent="." instance=ExtResource("11_2xb4x")]
+position = Vector2(-672, -4682)
+scale = Vector2(1.3, 1.3)
+
+[node name="Obstacle7" parent="." instance=ExtResource("12_qa3ja")]
+position = Vector2(-551, -2783)
+rotation = 2.15374
+scale = Vector2(1.4, 1.4)
+
+[node name="Obstacle8" parent="." instance=ExtResource("6_p3ml7")]
+position = Vector2(-3106, 249)
+scale = Vector2(3, 3)
+
+[node name="Obstacle9" parent="." instance=ExtResource("7_ukxlx")]
+position = Vector2(-6101, -97.9998)
+rotation = 0.47822
+scale = Vector2(1.5, 1.5)
+
+[node name="Obstacle10" parent="." instance=ExtResource("8_3jg2g")]
+position = Vector2(-6684, -3525)
+
+[node name="Obstacle11" parent="." instance=ExtResource("9_njxk7")]
+position = Vector2(1237, -3415)
+scale = Vector2(2, 2)
+
+[node name="Obstacle12" parent="." instance=ExtResource("10_s2kxt")]
+position = Vector2(-6287, 3590)
+scale = Vector2(1.5, 1.5)
+
+[node name="Obstacle13" parent="." instance=ExtResource("11_2xb4x")]
+position = Vector2(-2826, 5356)
+
+[node name="Obstacle14" parent="." instance=ExtResource("12_qa3ja")]
+position = Vector2(-3364, -2587)
+
+[node name="Star" parent="." instance=ExtResource("13_fmtrr")]
+position = Vector2(-132, 3569)
+scale = Vector2(0.05, 0.05)
+
+[node name="Obstacle15" parent="." instance=ExtResource("8_3jg2g")]
+position = Vector2(-1685, 3335)
+rotation = 3.11192
+
+[node name="Obstacle16" parent="." instance=ExtResource("12_qa3ja")]
+position = Vector2(160, 5332)
+rotation = -1.31598
+
+[node name="Obstacle17" parent="." instance=ExtResource("7_ukxlx")]
+position = Vector2(-467, 2901)
+rotation = 2.87281
