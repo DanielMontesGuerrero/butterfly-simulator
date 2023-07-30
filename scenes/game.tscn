@@ -11,9 +11,10 @@ script = ExtResource("1_kgkk8")
 [node name="Player" parent="." instance=ExtResource("2_b3hvr")]
 
 [node name="Debug" type="Node2D" parent="."]
+visible = false
 script = ExtResource("5_l6fbu")
 
 [node name="Level1" parent="." instance=ExtResource("9_uxa75")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.184314, 0.184314, 0.184314, 1)
+color = Color(0, 0, 0, 1)
