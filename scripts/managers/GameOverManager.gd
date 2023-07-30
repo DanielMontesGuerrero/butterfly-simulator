@@ -18,3 +18,5 @@ func _process(_delta):
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		GameManager.go_to_start_menu()
+	if event.is_action_pressed("ui_cancel"):
+		GameManager.quit()

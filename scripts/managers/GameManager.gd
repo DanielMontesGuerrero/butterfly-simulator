@@ -51,3 +51,7 @@ func go_to_start_menu():
 func win_game():
 	total_score = level_mngr.score
 	get_tree().change_scene_to_packed(win_scene)
+
+
+func quit():
+	get_tree().quit()

@@ -25,6 +25,7 @@ texture = ExtResource("2_lumrb")
 shape = SubResource("CircleShape2D_e1bki")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource("OccluderPolygon2D_eg5u8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
