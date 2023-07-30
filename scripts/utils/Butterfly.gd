@@ -11,7 +11,9 @@ const jump_speed_factor := 5
 const gravity_factor := 10
 const stop_factor := 0.01
 const EPS := 1e-9
+
 const INITIAL_NUM_LIVES := 3
+const MAX_NUM_LIVES := 5
 
 
 func sgn(x: float):
@@ -70,4 +72,5 @@ func receive_damage():
 
 
 func add_live():
-	num_lives += 1
+	if num_lives < MAX_NUM_LIVES:
+		num_lives += 1

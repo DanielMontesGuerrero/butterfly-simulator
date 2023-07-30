@@ -13,3 +13,8 @@ func _process(_delta):
 
 func _on_button_pressed():
 	GameManager.go_to_level(0)
+
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		GameManager.quit()
