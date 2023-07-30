@@ -33,8 +33,7 @@ func draw_gravity_arrow():
 
 
 func draw_player_position():
-	# draw_circle(player_position, 20, clr)
-	pass
+	draw_circle(player_position, 20, clr)
 
 
 func draw_touch_position():

@@ -15,6 +15,7 @@ const damage_effect := preload("res://assets/sound/effects/hit.mp3")
 const jump_effect := preload("res://assets/sound/effects/whir.mp3")
 const wind_blow_effect := preload("res://assets/sound/effects/blow.mp3")
 const wind_storm_effect := preload("res://assets/sound/effects/wind_storm.mp3")
+const bounce_effect := preload("res://assets/sound/effects/bounce.mp3")
 
 
 func _ready():
@@ -88,6 +89,8 @@ func play_player_effect(effect: String):
 			play_pe_effect(damage_effect)
 		"jump":
 			play_pe_effect(jump_effect, 1)
+		"bounce":
+			play_pe_effect(bounce_effect)
 		_:
 			pass
 

@@ -1,0 +1,106 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://dkjmxhqkj6vje"]
+
+[ext_resource type="Texture2D" uid="uid://cppukvh8vvpw8" path="res://assets/sprites/butterfly.png" id="1_utfe5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdgw6"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qff0h"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isshx"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcsv7"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruyd7"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(2000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4438q"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k1gl"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvxy4"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(2000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dvn5"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d65ls"]
+atlas = ExtResource("1_utfe5")
+region = Rect2(1000, 0, 500, 500)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdgw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qff0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isshx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcsv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruyd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4438q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k1gl")
+}],
+"loop": true,
+"name": &"flutter",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvxy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvxy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dvn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dvn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d65ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d65ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qff0h")
+}],
+"loop": true,
+"name": &"flutter_down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qff0h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

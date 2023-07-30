@@ -12,6 +12,7 @@ polygon = PackedVector2Array(258, 1, 247, -44, 386, -239, 586, -179, 418, -331, 
 script = ExtResource("1_iq2l6")
 
 [node name="Obstacle5" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(-199, -1249)
 rotation = 4.71239
 texture = ExtResource("2_tlqkj")

@@ -17,6 +17,7 @@ radius = 13756.8
 script = ExtResource("1_cyitf")
 
 [node name="Leaf4" type="Sprite2D" parent="CharacterBody2D"]
+modulate = Color(0, 0, 0, 1)
 texture = ExtResource("1_ecs34")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]

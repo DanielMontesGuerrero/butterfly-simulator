@@ -41,9 +41,8 @@ func process(delta: float):
 		velocity += delta * gravity_velocity
 
 
-func directed_jump(direction_point: Vector2):
+func directed_jump(direction: Vector2):
 	is_jumping = true
-	var direction = direction_point - position
 	var jump_inc = jump_speed_factor * direction.normalized()
 	if sgn(velocity.x) != sgn(jump_inc.x) and sgn(velocity.x) != 0:
 		velocity.x = 0

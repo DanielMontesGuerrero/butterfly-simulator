@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd6i6h3gqlit4"]
+
+[ext_resource type="Script" path="res://scripts/managers/WindGustManager.gd" id="1_wrss5"]
+[ext_resource type="Gradient" uid="uid://cms3e4yx26751" path="res://assets/gradients/wind_blow_gradient.tres" id="2_fogdh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_so842"]
+light_mode = 1
+
+[sub_resource type="Curve" id="Curve_ibx0b"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_7eyv3"]
+_data = {
+"points": PackedVector2Array(-260.798, -46.1474, 260.798, 46.1474, -806, 6, -238.936, 9.53674e-07, 238.936, -9.53674e-07, -220, -21, -208.034, 6.38961, 208.034, -6.38961, 357, 30, -386.654, -44.2133, 386.654, 44.2133, 1002, -1)
+}
+point_count = 4
+
+[node name="WindGust" type="Line2D"]
+material = SubResource("CanvasItemMaterial_so842")
+width_curve = SubResource("Curve_ibx0b")
+script = ExtResource("1_wrss5")
+line_segments = 40
+trail_speed = 0.01
+trail_color_gradient = ExtResource("2_fogdh")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_7eyv3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-806, 6)
+rotation = 0.175134
